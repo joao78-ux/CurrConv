@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>currency converter</title>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="div-main">
+            <label class="label-main">
+                Converter De
+                <select class="currencyFrom1" onchange="convert()">
+                    <option value="BRL">Real Brasileiro (BRL)</option>
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
+                    <option value="JPY">Iene Japonês (JPY)</option>
+                </select>
+            </label>
+
+            <label class="label-main">
+                Converter para
+                <select class="currencyFrom2" onchange="convert()">
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
+                    <option value="JPY">Iene Japonês (JPY)</option>
+                    <option value="BRL">Real Brasileiro (BRL)</option>
+                </select>
+            </label>
+
+            <label class="label-main">
+                Digite o valor a ser convertido
+                <input type="number" id="inputValue-valor" placeholder="Valor a ser convertido">
+            </label>
+
+            <button id="convertButton">Converter</button>
+        </div>
+        <section class="container-section">
+            <div class="div-section">
+                <img  class="img-currency1" src="/assets/brasil.png" alt="">
+                <p class="currencyName1"> <strong> Real Brasileiro </strong></p>
+                <p class="amount1">R$ 0,00</p>
+            </div>
+            <div class="div-section">
+                <img class="img-currency2" src="./assets/eua.png" alt="">
+                <p class="currencyName2"> <strong> Dólar Americano </strong></p>
+                <p class="amount2">US$ 0,00</p>
+            </div>
+        </section>
+
+
+    </main>
+ 
+</body>
+<script src="./script.js"></script>
+
+</html>
+
+
