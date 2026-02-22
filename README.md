@@ -19,7 +19,7 @@ Projeto de um conversor de moedas dinâmico onde apliquei conceitos avançados d
 * JavaScript (Objetos e Manipulação de DOM)
 
 ## 🔗 Link do Projeto
-[Você pode testar o conversor clicando aqui]: https:(//joao78-ux.github.io/CurrConv/)
+Você pode testar o conversor clicando aqui: https:(//joao78-ux.github.io/CurrConv/)
 
 ---
 "O aprendizado não é sobre fazer o código funcionar, mas sobre como deixá-lo melhor a cada dia." 🚀
