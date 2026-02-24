@@ -67,7 +67,7 @@ function changeSelect1() {
     }
 
     else if (selecTone.value === "BRL") {
-        imgCurrency1.src = "/assets/brasil.png"
+        imgCurrency1.src = "./assets/brasil.png"
         currencyName1.innerHTML = "Real Brasileiro"
     }
 }
