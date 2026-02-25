@@ -44,8 +44,10 @@ function convert() {
         currency: currencycode[selecttwo.value]
     }).format(result);
 
-changeSelect2()
-changeSelect1()
+    if (isNaN(value) || inputValue === "" ) {
+       amount2.innerHTML ="US$ 0,00"
+       return;
+}
 
 }
 
@@ -105,8 +107,8 @@ function changeSelect2() {
 
 
 
-selecttwo.addEventListener('change', changeSelect2)
-selecTone.addEventListener('change', changeSelect1)
+selecttwo.addEventListener('change',  () =>{ changeSelect2(); convert();} )
+selecTone.addEventListener('change',  () =>{ changeSelect1(); convert();} )
 convertButton.addEventListener('click', convert)
 
 /*
