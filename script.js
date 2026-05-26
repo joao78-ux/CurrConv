@@ -10,11 +10,10 @@ const imgCurrency1 = document.querySelector('.img-currency1')
 const imgcurrency2 = document.querySelector('.img-currency2')
 
 
-
 const taxa = {
-    USD: 5.20,
-    EUR: 6.18,
-    GBP: 7.08,
+    USD: 1,
+    EUR: 1,
+    GBP: 1,
     BRL: 1
 }
 
@@ -25,8 +24,15 @@ const currencycode = {
     BRL: 'BRL'
 }
 
-function convert() {
-
+  const lookforfees = async () => { 
+   const response = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL')
+   const data = await response.json()
+    
+   taxa.USD = parseFloat(data.USDBRL.bid)
+   taxa.EUR = parseFloat(data.EURBRL.bid)
+   taxa.GBP = parseFloat(data.GBPBRL.bid)
+}
+  function convert() {
     const value = parseFloat(inputValue.value)
 
     const currencyorigin = taxa[selecTone.value];
@@ -106,7 +112,7 @@ function changeSelect2() {
 
 
 
-
+lookforfees()
 selecttwo.addEventListener('change',  () =>{ changeSelect2(); convert();} )
 selecTone.addEventListener('change',  () =>{ changeSelect1(); convert();} )
 convertButton.addEventListener('click', convert)
